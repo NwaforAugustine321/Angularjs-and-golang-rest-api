@@ -1,34 +1,3 @@
-// package main
-
-// import (
-// 	"net/http"
-
-// 	"github.com/go/resst-app/config"
-// 	"github.com/go/resst-app/db"
-// )
-
-// func main() {
-
-// 	config.LoadEnv(".env")
-
-// 	app := config.GetAppconfig()
-// 	db.DBinit(app)
-
-// 	err := db.DB.DBPing()
-
-// 	if err != nil {
-// 		app.Logger.Println("unable to retrieve connection pool", err)
-// 	}
-
-// 	srv := &http.Server{
-// 		Addr:    app.Port,
-// 		Handler: routes(app),
-// 	}
-
-// 	app.Logger.Fatal(srv.ListenAndServe())
-
-// }
-
 package main
 
 import (
