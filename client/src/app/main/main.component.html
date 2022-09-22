@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 class="text-center">Go movies app</h3>
+    <hr />
+    <div class="container-md">
+      <div class="row">
+        <div class="col col-3">
+          <ul class="list-group">
+            <li class="list-group-item" routerLink="/">Home</li>
+            <li class="list-group-item" routerLink="movies">Movies</li>
+            <li class="list-group-item" routerLink="admin">Manage Catalog</li>
+          </ul>
+        </div>
+        <div class="col col-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

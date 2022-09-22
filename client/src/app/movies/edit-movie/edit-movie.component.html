@@ -1,0 +1,55 @@
+<form [formGroup]="movie_form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="title"
+      placeholder="Title"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Year</label>
+    <input
+      type="number"
+      class="form-control"
+      formControlName="year"
+      placeholder="Year"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Run Time</label>
+    <input
+      type="number"
+      class="form-control"
+      formControlName="runTime"
+      placeholder="Run Time"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Rating</label>
+    <input
+      
+      type="number"
+      class="form-control"
+      formControlName="rating"
+      placeholder="Rating"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Description</label
+    >
+    <textarea
+      formControlName="description"
+      class="form-control"
+      rows="3"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

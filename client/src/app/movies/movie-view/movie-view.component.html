@@ -1,0 +1,22 @@
+<p>Title</p>
+<div class="row">
+    <div class="col"><p>{{movie_detail.title}}</p></div>
+    <div class="col"><p>Rating : {{movie_detail.rating}}</p></div>
+</div>
+<hr>
+<p>Description</p>
+<p>{{movie_detail.description}}</p>
+<hr>
+<div class="row">
+    <div class="col"><p>Run time : {{movie_detail.runTime}}</p></div>
+    <div class="col"><p>MPAA-Rating : {{movie_detail.mpaa_rating}}</p></div>
+</div>
+
+<div class="btn-group" role="group">
+ 
+  
+<a [routerLink]="['/movie']" [queryParams]="{action:'create'}"><button type="button" class="btn btn-primary">Create</button></a>
+  <a ><button type="button" class="btn btn-success" [routerLink]="['/movie']" [queryParams]="{action:'edit',id:movie_detail.id}">Edit</button></a>
+  <a href=""><button type="button" class="btn btn-danger">Delete</button></a>
+</div>
+
