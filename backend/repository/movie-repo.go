@@ -15,6 +15,20 @@ func NewMovieService(ctx *config.AppContext) repointerfaces.IMovie {
 	return &movieRepo{}
 }
 
-func  (datasource *movieRepo)GetSingleMovie(id int)(interface{}, error) {
+func (datasource *movieRepo) GetSingleMovie(id int) (interface{}, error) {
 	return movieDatasource.GetSingleMovie(id)
+}
+
+func (datasource *movieRepo) GetAllMovie() (interface{}, error) {
+	return datasource.GetAllMovie()
+}
+
+
+func (datasource *movieRepo) EditMovie() error {
+	return datasource.EditMovie()
+}
+
+
+func (datasource *movieRepo) CreatMovie() error {
+	return datasource.CreatMovie()
 }

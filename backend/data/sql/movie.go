@@ -82,3 +82,17 @@ func (repo *movieDataSource) GetSingleMovie(id int) (interface{}, error) {
 	}
 
 }
+
+func (repo *movieDataSource) GetAllMovie() (interface{}, error) {
+	return nil,nil
+}
+
+
+func (repo *movieDataSource) EditMovie() error {
+	return nil
+}
+
+
+func (repo *movieDataSource) CreatMovie() error {
+	return nil
+}
