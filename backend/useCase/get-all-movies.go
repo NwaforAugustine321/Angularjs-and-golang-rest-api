@@ -4,6 +4,6 @@ import "github.com/go/resst-app/repointerfaces"
 
 
 
-func GetAllMovies(repo repointerfaces.IMovie){
- repo.GetAllMovie()
+func GetAllMovies(repo repointerfaces.IMovie)(interface{}, error){
+ return repo.GetAllMovie()
 }

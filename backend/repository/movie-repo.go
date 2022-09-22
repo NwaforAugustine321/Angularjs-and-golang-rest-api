@@ -3,6 +3,7 @@ package repository
 import (
 	"github.com/go/resst-app/config"
 	"github.com/go/resst-app/data/sql"
+	"github.com/go/resst-app/model"
 	"github.com/go/resst-app/repointerfaces"
 )
 
@@ -24,8 +25,8 @@ func (datasource *movieRepo) GetAllMovie() (interface{}, error) {
 }
 
 
-func (datasource *movieRepo) EditMovie() error {
-	return datasource.EditMovie()
+func (datasource *movieRepo) EditMovie(movie *model.Movie) error {
+	return datasource.EditMovie(movie)
 }
 
 

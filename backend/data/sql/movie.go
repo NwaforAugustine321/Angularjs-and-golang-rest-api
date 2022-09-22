@@ -88,7 +88,7 @@ func (repo *movieDataSource) GetAllMovie() (interface{}, error) {
 }
 
 
-func (repo *movieDataSource) EditMovie() error {
+func (repo *movieDataSource) EditMovie(movie *model.Movie) error {
 	return nil
 }
 
