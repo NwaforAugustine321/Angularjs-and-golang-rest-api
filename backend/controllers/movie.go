@@ -111,14 +111,15 @@ func (ctx *movieController) GetAllMovies(response http.ResponseWriter, request *
 
 	message := "request failed"
 
-	movie, err := useCase.GetAllMovies(repo)
+	res, err := useCase.GetAllMovies(repo)
 
 	if err != nil {
+
 		errorResponse(message, response)
 		return
 	}
 
-	result, _ := json.MarshalIndent(movie, "", "  ")
+	result, _ := json.MarshalIndent(res, "", "  ")
 
 	response.Write(result)
 }

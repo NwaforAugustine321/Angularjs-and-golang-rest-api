@@ -5,8 +5,12 @@ import (
 	"github.com/go/resst-app/repointerfaces"
 )
 
+func EditMovie(repo repointerfaces.IMovie, movie *model.Movie) error {
+	err := repo.EditMovie(movie)
 
+	if err != nil {
+      return err
+	}
 
-func EditMovie(repo repointerfaces.IMovie, movie *model.Movie)error {
-	return repo.EditMovie()
+	return nil
 }

@@ -21,11 +21,11 @@ func main() {
 	loginRoute := controllers.NewLoginController(applicationContext)
 	moviesRoute := controllers.NewMovieController(applicationContext)
 
-	app.Get("/api/v1/login", loginRoute.Login)
-	app.Post("/api/v1/movie/create", moviesRoute.CreatMovie)
-	app.Post("/api/v1/movie/edit/:id", moviesRoute.EditMovie)
-	app.Get("/api/v1/movie/:id", moviesRoute.GetSingleMovie)
-	app.Get("/api/v1/movies", moviesRoute.GetAllMovies)
+	app.Get("/v1/login", loginRoute.Login)
+	app.Post("/v1/movie/create", moviesRoute.CreatMovie)
+	app.Post("/v1/movie/edit/:id", moviesRoute.EditMovie)
+	app.Get("/v1/movie/:id", moviesRoute.GetSingleMovie)
+	app.Get("/v1/movies", moviesRoute.GetAllMovies)
 
 	app.Serve(":4000", applicationContext)
 }

@@ -15,5 +15,5 @@ type IMovie interface{
 	GetSingleMovie(id int) (interface{}, error)
 	GetAllMovie()(interface{}, error)
 	EditMovie(movie *model.Movie) error
-	CreatMovie()error
+	CreatMovie(movie *model.Movie)(string , error)
 }

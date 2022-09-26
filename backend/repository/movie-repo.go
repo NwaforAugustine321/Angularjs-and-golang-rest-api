@@ -21,15 +21,16 @@ func (datasource *movieRepo) GetSingleMovie(id int) (interface{}, error) {
 }
 
 func (datasource *movieRepo) GetAllMovie() (interface{}, error) {
-	return datasource.GetAllMovie()
-}
+	return  movieDatasource.GetAllMovie()
 
+	
+
+}
 
 func (datasource *movieRepo) EditMovie(movie *model.Movie) error {
-	return datasource.EditMovie(movie)
+	return movieDatasource.EditMovie(movie)
 }
 
-
-func (datasource *movieRepo) CreatMovie() error {
-	return datasource.CreatMovie()
+func (datasource *movieRepo) CreatMovie(movie *model.Movie) (string, error) {
+	return movieDatasource.CreatMovie(movie)
 }
