@@ -18,10 +18,10 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get<{ movies: [] }>('http://localhost:4000/v1/movies')
+      .get<[]>('http://localhost:4000/v1/movies')
       .pipe(catchError(this.handleError))
-      .subscribe((data: { movies: [] }): void => {
-        this.movies_list = data.movies;
+      .subscribe((data: []): void => {
+        this.movies_list = data;
       });
   }
 }

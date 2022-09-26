@@ -28,11 +28,9 @@ export class MovieViewComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((param): void => {
       this.http
-        .get<{ movies: Imovie }>(
-          `http://localhost:4000/v1/movie/${Number(param['id'])}`
-        )
-        .subscribe((movie_detail: { movies: Imovie }) => {
-          this.movie_detail = movie_detail.movies;
+        .get<Imovie>(`http://localhost:4000/v1/movie/${Number(param['id'])}`)
+        .subscribe((movie_detail: Imovie) => {
+          this.movie_detail = movie_detail;
         });
     });
   }
